@@ -6,7 +6,8 @@ namespace SocialNetwork
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var consoleApp = new SocialNetworkConsoleApp(new SystemConsoleWrapper());
+            consoleApp.Run();
         }
     }
 }
