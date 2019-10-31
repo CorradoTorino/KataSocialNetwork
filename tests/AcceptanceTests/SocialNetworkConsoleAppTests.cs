@@ -8,18 +8,45 @@ namespace AcceptanceTests
     public class SocialNetworkConsoleAppTests
     {
         [TestMethod]
-        public void TestIConsoleInjection()
+        public void WelcomeScreen_ShowsTwoLines()
         {
             // Arrange
             var consoleMock = new Mock<IConsole>();
+            var socialNetworkConsoleApp = new SocialNetworkConsoleApp(consoleMock.Object);
 
             // Act
-            var socialNetworkConsoleApp = new SocialNetworkConsoleApp(consoleMock.Object);
+            socialNetworkConsoleApp.Run();
 
             // Assert
             consoleMock.Verify(m => m.WriteLine(It.IsAny<string>()), Times.Exactly(2));
-            //consoleMock.Verify(m=> m.WriteLine("Welcome to Social Network!"),Times.Once);
-            //consoleMock.Verify(m => m.WriteLine("Usage To post something: Alice: This is my dummy post!"), Times.Once);
+        }
+
+        [TestMethod]
+        public void WelcomeScreen_ShowsWelcomeMessage()
+        {
+            // Arrange
+            var consoleMock = new Mock<IConsole>();
+            var socialNetworkConsoleApp = new SocialNetworkConsoleApp(consoleMock.Object);
+
+            // Act
+            socialNetworkConsoleApp.Run();
+
+            // Assert
+            consoleMock.Verify(m => m.WriteLine("Welcome to Social Network!"), Times.Once);
+        }
+
+        [TestMethod]
+        public void WelcomeScreen_ShowsHowToPost()
+        {
+            // Arrange
+            var consoleMock = new Mock<IConsole>();
+            var socialNetworkConsoleApp = new SocialNetworkConsoleApp(consoleMock.Object);
+
+            // Act
+            socialNetworkConsoleApp.Run();
+
+            // Assert
+            consoleMock.Verify(m => m.WriteLine("Usage to post.. <Alice> This is my dummy post!"), Times.Once);
         }
     }
 }

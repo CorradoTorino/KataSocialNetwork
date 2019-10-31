@@ -11,8 +11,8 @@ namespace SocialNetwork
 
         public void Run()
         {
-            console.WriteLine("a");
-            console.WriteLine("b");
+            console.WriteLine("Welcome to Social Network!");
+            console.WriteLine("Usage to post.. <Alice> This is my dummy post!");
         }
     }
 }
