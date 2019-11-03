@@ -19,3 +19,27 @@ Your team also decided for this project to not only apply TDD and pair-programmi
 - Mentions: **B**ob can link to **C**harlie in a message using “@”
 - Links: **A**lice can link to a clickable web resource in a message
 - Direct Messages: **M**allory can send a private message to **A**lice
+
+## Lessons Learnt & Practices
+
+- Moq
+
+  - Setup Mocks for asynchronous programming: i.e. for testing console interactions
+
+- Best Practices
+
+  - Visual Studio project setup
+
+- Programming & Design Patterns
+
+  - Asynchronous programming patterns
+
+- Libraries
+
+  - Moq
+
+  - Autofixture
+
+    
+
+  
