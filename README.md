@@ -1,17 +1,11 @@
 # Social Network Kata
-## Credits
-
 Inspired by [Sandro Mancuso & Samir Talwar](http://monospacedmonologues.com/post/49250842364/the-social-networking-kata)
 
-## Your Team
-
-Is tired of all those boring tasks like bowling game scores, bank accounts, singing songs or commanding mars rovers. This time you want to do something truly innovative: A Social Network!
-
-## Your Rules
+Your Team is tired of all those boring tasks like bowling game scores, bank accounts, singing songs or commanding mars rovers. This time you want to do something truly innovative: A Social Network!
 
 Your team also decided for this project to not only apply TDD and pair-programming - this time you’re gonna use BDD to cover all important features.
 
-## Your Backlog
+## Backlog
 
 - Posting: **A**lice can publish messages to a personal timeline
 - Reading: **B**ob can view **A**lice’s timeline
@@ -25,21 +19,26 @@ Your team also decided for this project to not only apply TDD and pair-programmi
 - Moq
 
   - Setup Mocks for asynchronous programming: i.e. for testing console interactions
-
 - Best Practices
 
   - Visual Studio project setup
-
 - Programming & Design Patterns
 
   - Asynchronous programming patterns
-
 - Libraries
 
   - Moq
+- Autofixture
+- Create a web API with ASP.NET Core
 
-  - Autofixture
+## Resources
 
-    
+- [Create a web API with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.0&tabs=visual-studio)
 
-  
+## ToDo List
+
+- [ ] Finalize Web Api
+- [ ] ...
+
+
+
