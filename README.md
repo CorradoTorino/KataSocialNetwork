@@ -16,20 +16,24 @@ Your team also decided for this project to not only apply TDD and pair-programmi
 
 ## Lessons Learnt & Practices
 
-- Moq
-
+- Moq & Testing
   - Setup Mocks for asynchronous programming: i.e. for testing console interactions
+  - Make tests async
 - Best Practices
-
   - Visual Studio project setup
 - Programming & Design Patterns
-
   - Asynchronous programming patterns
-- Libraries
-
+- Libraries & Tools
   - Moq
-- Autofixture
-- Create a web API with ASP.NET Core
+  - Autofixture
+  - Postmap
+- ASP.NET Core
+  - Create a web API with ASP.NET Core
+  - Unit test a MVC controller
+  - Use UseInMemoryDatabase for testing purpose
+- Web Programming
+  - Http Status Codes
+  - Usage of Postmap
 
 ## Resources
 
