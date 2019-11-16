@@ -38,6 +38,8 @@ Your team also decided for this project to not only apply TDD and pair-programmi
 ## Resources
 
 - [Create a web API with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.0&tabs=visual-studio)
+- [Tutorial: Get started with Razor Pages in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-3.0&tabs=visual-studio)
+- 
 
 ## ToDo List
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WebApi.Models;
 
 namespace WebApi.Models
 {
@@ -10,5 +11,7 @@ namespace WebApi.Models
         }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<WebApi.Models.Message> Message { get; set; }
     }
 }
