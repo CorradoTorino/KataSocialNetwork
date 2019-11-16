@@ -9,13 +9,10 @@ using WebApi.Models;
 namespace WebApiTests
 {
     [TestClass]
-    public class UsersControllerTests
+    public class UsersControllerPostUserTests : UserControllerTests
     {
-        private UsersController controller;
-        private SocialNetworkContext context;
-
         [TestMethod]
-        public async Task PostUser_CreatedUserSuccessfully()
+        public async Task PostUser_ReturnsStatusCodeCreated()
         {
             // Act
             var result = await controller.PostUser(new User(){Name = "dummyName" });
@@ -39,22 +36,6 @@ namespace WebApiTests
             var userCreated = ((CreatedAtActionResult)result.Result).Value as User;
             Assert.IsNotNull(userCreated);
             Assert.AreEqual(userName, userCreated.Name);
-        }
-
-        [TestInitialize]
-        public void TestInitialize()
-        {
-            var options = new DbContextOptionsBuilder<SocialNetworkContext>()
-                .UseInMemoryDatabase(databaseName: "SocialNetwork")
-                .Options;
-            context = new SocialNetworkContext(options);
-            controller = new UsersController(context);
-        }
-
-        [TestCleanup]
-        public void TestCleanup()
-        {
-            context.Dispose();
         }
     }
 }
