@@ -33,8 +33,7 @@ namespace WebApiTests
             var result = await controller.PostUser(new User() { Name = userName });
             
             // Assert
-            var userCreated = ((CreatedAtActionResult)result.Result).Value as User;
-            Assert.IsNotNull(userCreated);
+            var userCreated = ExtractUserFromCreatedAtActionResult(result);
             Assert.AreEqual(userName, userCreated.Name);
         }
     }

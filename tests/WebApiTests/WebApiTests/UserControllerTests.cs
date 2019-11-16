@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebApi.Controllers;
@@ -9,6 +10,16 @@ namespace WebApiTests
     {
         protected UsersController controller;
         private SocialNetworkContext context;
+
+        protected static User ExtractUserFromCreatedAtActionResult(ActionResult<User> actionResult)
+        {
+            var createdAtActionResult = actionResult.Result as CreatedAtActionResult;
+
+            Assert.IsNotNull(createdAtActionResult, "the action result was not a 'CreatedAtActionResult'.");
+            var userCreated = createdAtActionResult.Value as User;
+            Assert.IsNotNull(userCreated, "The Value was not a 'User'");
+            return userCreated;
+        }
 
         [TestInitialize]
         public void TestInitialize()

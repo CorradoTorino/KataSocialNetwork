@@ -13,8 +13,8 @@ namespace WebApiTests
         public async Task DeleteUser_DeleteTheExistingUser()
         {
             // Arrange
-            var postUserResult = await controller.PostUser(new User() { Name = "dummyName" });
-            var userCreated = ((CreatedAtActionResult)postUserResult.Result).Value as User;
+            var userCreated = ExtractUserFromCreatedAtActionResult(
+                await controller.PostUser(new User() { Name = "dummyName" }));
             
             // Act
             var result = await controller.DeleteUser(userCreated.Id);
@@ -32,7 +32,7 @@ namespace WebApiTests
             var result = await controller.DeleteUser(1234);
 
             // Assert
-            Assert.IsInstanceOfType(result.Result, typeof(NotFoundResult));
+            Assert.IsInstanceOfType(result.Result, typeof(NotFoundResult), "Unexpected result returned.");
         }
 
         [TestMethod]
@@ -43,8 +43,9 @@ namespace WebApiTests
 
             // Assert
             var notFoundResult = result.Result as NotFoundResult;
-            Assert.IsNotNull(notFoundResult);
-            Assert.AreEqual((int)HttpStatusCode.NotFound, notFoundResult.StatusCode);
+            Assert.IsNotNull(notFoundResult, "Unexpected result returned.");
+            Assert.AreEqual((int)HttpStatusCode.NotFound, notFoundResult.StatusCode,
+                "Unexpected http code returned");
         }
     }
 }
