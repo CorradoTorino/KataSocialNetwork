@@ -29,11 +29,13 @@ Your team also decided for this project to not only apply TDD and pair-programmi
   - Postmap
 - ASP.NET Core
   - Create a web API with ASP.NET Core
-  - - Scaffold item in order to create infrastructure for edit with APIRest
+  - Scaffold item in order to create infrastructure for edit with APIRest
   - Unit test a MVC controller
   - Use UseInMemoryDatabase for testing purpose
   - Create a Razor Web App
   - Scaffold item in order to create infrastructure for edit with Razor pages
+  - Entity Framework Code first
+  - Create a db initial migration
 - Web Programming
   - Http Status Codes
   - Usage of Postmap
